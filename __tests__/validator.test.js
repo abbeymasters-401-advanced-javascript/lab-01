@@ -56,7 +56,7 @@ describe('validator module', () => {
       expect(validator.isBoolean(bool)).toBeTruthy();
     });
 
-    it.skip('functions', () => {
+    it('functions', () => {
       expect(validator.isFunction(str)).toBeFalsy();
       expect(validator.isFunction(num)).toBeFalsy();
       expect(validator.isFunction(arr)).toBeFalsy();
@@ -129,21 +129,20 @@ describe('validator module', () => {
       expect(validator.getValidator('function')).toBe(validator.isFunction);
     });
 
-    it.skip('array of strings', () => {
-      
+    it('array of strings', () => {
+      expect(validator.getValidator('strings')).toBe(validator.isString);
     });
 
-    it.skip('array of numbers', () => {
-      
+    it('array of numbers', () => {
+      expect(validator.getValidator('numbers')).toBe(validator.isNumber);
     });
 
-    it.skip('array of objects', () => {
-      
+    it('array of objects', () => {
+      expect(validator.getValidator('objects')).toBe(validator.isObject);
     });
 
-    it.skip('array of booleans', () => {
-      
+    it('array of booleans', () => {
+      expect(validator.getValidator('booleans')).toBe(validator.isBoolean);
     });
-
   });
 });
