@@ -106,27 +106,27 @@ describe('validator module', () => {
 
     it('strings', () => {
       // TODO: pass getValidator the rules
-      expect(validator.getValidator(/* rules */)).toBe(validator.isString);
+      expect(validator.getValidator('string')).toBe(validator.isString);
     });
     
-    it.skip('numbers', () => {
-      expect(validator.getValidator(/* rules */)).toBe(validator.isNumber);
+    it('numbers', () => {
+      expect(validator.getValidator('number')).toBe(validator.isNumber);
     });
 
-    it.skip('arrays', () => {
-      
+    it('arrays', () => {
+      expect(validator.getValidator('array')).toBe(validator.isArray);
     });
 
-    it.skip('objects', () => {
-      
+    it('objects', () => {
+      expect(validator.getValidator('object')).toBe(validator.isObject);
     });
 
-    it.skip('booleans', () => {
-      
+    it('booleans', () => {
+      expect(validator.getValidator('boolean')).toBe(validator.isBoolean);
     });
 
-    it.skip('functions', () => {
-      
+    it('functions', () => {
+      expect(validator.getValidator('function')).toBe(validator.isFunction);
     });
 
     it.skip('array of strings', () => {
