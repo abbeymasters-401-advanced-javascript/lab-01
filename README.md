@@ -1,8 +1,8 @@
-# LAB - 
+# LAB - 01
 
-## Project Name
+## Validator Test
 
-### Author: Student/Group Name
+### Author: Abbey Masters
 
 ### Links and Resources
 * [submission PR](http://xyz.com)
