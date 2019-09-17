@@ -15,6 +15,7 @@
   "dependencies": {
     "eslint": "^6.1.0",
     "eslint-plugin-react": "^7.14.3",
-    "jest": "^24.9.0"
+    "jest": "^24.9.0",
+    "jsdoc": "^3.6.3"
   }
 }

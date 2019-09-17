@@ -12,11 +12,14 @@
 * [jsdoc](http://xyz.com) (Server assignments)
 
 #### Running the app
-
-**Describe what npm scripts do**
-(hint: `> npm run` from command line will give you list, paste here and change
-command to description)
+Commands:
+"start": "node index.js",
+"test": "jest --verbose --coverage",
+"lint": "eslint '**/*.js'",
+"test-watch": "jest --watchAll --verbose --coverage",
+"jsdoc": "jsdoc -c ./docs/config/jsdoc.config.json"
   
 #### Tests
-Any additional testing information
+* Jest Tests: `npm test`
+* Lint Tests: `npm run lint`
 
