@@ -146,3 +146,27 @@ describe('validator module', () => {
     });
   });
 });
+
+
+describe('casting data types', () => {
+  
+  const str = 'yes';
+  const num = 1;
+  const bool = false;
+  const date = new Date();
+  const obj = {};
+
+
+  it('is it a string?', () => {
+    expect(validator.castString(str)).toBe('yes');
+    expect(validator.castString(num)).toBe('1');
+    expect(validator.castString(bool)).toBe('false');
+
+    expect(() => {
+      validator.castString(date);
+    }).toThrow();
+    expect(() => {
+      validator.castString(obj);
+    }).toThrow();
+  });
+});
