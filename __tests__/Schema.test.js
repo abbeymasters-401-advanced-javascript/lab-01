@@ -33,6 +33,13 @@ describe('Schema', () => {
     kids: []
   };
 
+  const secondInvalidModel = {
+    firstName: 0,
+    lastName: '',
+    married: 10,
+    kids: 'woooo'
+  };
+
 
   it('validates a correct model', () => {
     expect(schemaValidator.validate(newModel)).toEqual(newModel);
@@ -45,6 +52,12 @@ describe('Schema', () => {
   it('throws on invalid model', () => {
     expect(() => {
       schemaValidator.validate(invalidModel);
+    }).toThrow(errors.ModelError);
+  });
+
+  it('throws on invalid model', () => {
+    expect(() => {
+      schemaValidator.validate(secondInvalidModel);
     }).toThrow(errors.ModelError);
   });
 
