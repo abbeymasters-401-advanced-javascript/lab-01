@@ -1,14 +1,14 @@
 # LAB - 01
 
-## Validator Test
+## Validator Test & Schema
 ### Author: Abbey Masters
 
 ### Links and Resources
 * [submission PR](https://github.com/abbeymasters-401-advanced-javascript/lab-01/pull/1)
 * [travis](https://travis-ci.com/abbeymasters-401-advanced-javascript/lab-01)
 
-#### Documentation
-* [jsdoc](http://xyz.com) (docs/config/jsdoc.config.json)
+* [submission PR day two] (https://github.com/abbeymasters-401-advanced-javascript/lab-01/pull/2)
+* [travis day two] (https://travis-ci.com/abbeymasters-401-advanced-javascript/lab-01/builds/128231592)
 
 #### Running the app
 Commands:
