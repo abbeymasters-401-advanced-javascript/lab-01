@@ -151,22 +151,73 @@ describe('validator module', () => {
 describe('casting data types', () => {
   
   const str = 'yes';
+  const strTrue = 'true';
+  const strFalse = 'false';
   const num = 1;
   const bool = false;
+  const boolTrue = true;
+  const boolZero = 0;
   const date = new Date();
   const obj = {};
+  const strNum = '56';
 
 
   it('is it a string?', () => {
     expect(validator.castString(str)).toBe('yes');
     expect(validator.castString(num)).toBe('1');
     expect(validator.castString(bool)).toBe('false');
-
-    expect(() => {
-      validator.castString(date);
-    }).toThrow();
+    expect(validator.castString(date.toString())).toBe(String(new Date()));
+    
     expect(() => {
       validator.castString(obj);
-    }).toThrow();
+    }).toThrow(validator.CannotCoerceError);
   });
+
+  it('is it a number?', () => {
+    expect(validator.castNumber(num)).toBe(1);
+    expect(validator.castNumber(strNum)).toBe(56);
+    
+    expect(() => {
+      validator.castNumber(bool);
+    }).toThrow(validator.CannotCoerceError);
+
+    expect(() => {
+      validator.castNumber(str);
+    }).toThrow(validator.CannotCoerceError);
+
+    expect(() => {
+      validator.castNumber(obj);
+    }).toThrow(validator.CannotCoerceError);
+
+    expect(() => {
+      validator.castNumber(date);
+    }).toThrow(validator.CannotCoerceError);
+  });
+
+  it('is it a boolean?', () => {
+    expect(validator.castBoolean(bool)).toBe(false);
+    expect(validator.castBoolean(boolTrue)).toBe(true);
+    expect(validator.castBoolean(strTrue)).toBe(true);
+    expect(validator.castBoolean(strFalse)).toBe(false);
+    expect(validator.castBoolean(boolZero)).toBe(false);
+
+    expect(() => {
+      validator.castBoolean(date);
+    }).toThrow(validator.CannotCoerceError);
+
+    expect(() => {
+      validator.castBoolean(obj);
+    }).toThrow(validator.CannotCoerceError);
+
+    expect(() => {
+      validator.castBoolean(str);
+    }).toThrow(validator.CannotCoerceError);
+
+  });
+
 });
+
+
+
+
+
