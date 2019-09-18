@@ -22,3 +22,6 @@ Commands:
 * Jest Tests: `npm test`
 * Lint Tests: `npm run lint`
 
+#### UML
+* [uml drawing] (assets/UML-lab2.jpeg)
+
