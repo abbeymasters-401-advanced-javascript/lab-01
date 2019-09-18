@@ -212,7 +212,24 @@ describe('casting data types', () => {
     expect(() => {
       validator.castBoolean(str);
     }).toThrow(validator.CannotCoerceError);
+  });
 
+  it('is it a date?', () => {
+    expect(validator.castDate(date)).toBe(String(new Date()));
+
+    expect(() => {
+      validator.castDate(str);
+    }).toThrow(validator.CannotCoerceError);
+    expect(() => {
+      validator.castDate(obj);
+    }).toThrow(validator.CannotCoerceError);
+    expect(() => {
+      validator.castDate(bool);
+    }).toThrow(validator.CannotCoerceError);
+    expect(() => {
+      validator.castDate(num);
+    }).toThrow(validator.CannotCoerceError);
+    
   });
 
 });
