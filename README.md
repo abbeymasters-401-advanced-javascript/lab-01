@@ -11,7 +11,7 @@
 * [travis day two] (https://travis-ci.com/abbeymasters-401-advanced-javascript/lab-01/builds/128231592)
 
 #### Docs
-* [Docs] (docs)
+* [Docs] (https://abbeymasters-401-advanced-javascript.github.io/lab-01/docs)
 
 #### Running the app
 Commands:
