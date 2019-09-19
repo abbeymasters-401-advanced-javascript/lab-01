@@ -10,6 +10,9 @@
 * [submission PR day two] (https://github.com/abbeymasters-401-advanced-javascript/lab-01/pull/2)
 * [travis day two] (https://travis-ci.com/abbeymasters-401-advanced-javascript/lab-01/builds/128231592)
 
+#### Docs
+* [Docs] (docs)
+
 #### Running the app
 Commands:
     "start": "node index.js",
