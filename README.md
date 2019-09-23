@@ -10,6 +10,9 @@
 * [submission PR day two] (https://github.com/abbeymasters-401-advanced-javascript/lab-01/pull/2)
 * [travis day two] (https://travis-ci.com/abbeymasters-401-advanced-javascript/lab-01/builds/128231592)
 
+* [lab four PR] (https://github.com/abbeymasters-401-advanced-javascript/lab-01/pull/4)
+* [travis lab four] ()
+
 #### Docs
 * [Docs] (https://abbeymasters-401-advanced-javascript.github.io/lab-01/docs)
 
